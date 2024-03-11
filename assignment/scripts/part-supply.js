@@ -16,7 +16,7 @@ console.log(supplyChanges); //expect 3, 5, -6, 0, 7, 11
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
 console.log('3. Access the second value of supplyChanges:');
-let secondItem = supplyChanges[1]; 
+let secondItem = supplyChanges[1]; // Assign the second element of the supplyChanges array to the variable secondItem
 console.log(supplyChanges[1]); // expect 5
 
 // 4. The last value in the 'supplyChanges' array was added by mistake.
@@ -41,10 +41,10 @@ console.log('Updated supplyChanges:', supplyChanges); // expect 3, 5, -6, 0, 7, 
 //      - If the value is a zero, push it into the 'zeroes' array.
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
 
-let positives = [];
+let positives = []; //defined variables with value of an empty array 
 let negatives = [];
 let zeroes = []; 
-for (let i = 0; i < supplyChanges.length; i++) {
+for (let i = 0; i < supplyChanges.length; i++) { // for loop through each element. (Initializes vairable i=0; .length returns the number of elements. goes through whole array; increases by 1 in each itteration.
   if (supplyChanges[i] > 0) {  // Check if the element is positive
     positives.push(supplyChanges[i]);// Add the positive number to the positives array
   }  else if (supplyChanges[i] < 0) { //Check if the current element is negative
@@ -54,9 +54,9 @@ for (let i = 0; i < supplyChanges.length; i++) {
   }
 }
 // Log the contents of each new array
-console.log('Positives:', positives);
-console.log('Negatives:', negatives);
-console.log('Zeroes:', zeroes);
+console.log('Positives:', positives); //expect 3,5,7,11
+console.log('Negatives:', negatives); //expect -6
+console.log('Zeroes:', zeroes); // expect 0
 
 
 
